@@ -11,6 +11,18 @@ function juhuslikSona() {
     return sonad[juhuslikIndeks];
 }
 
-// Kuvame konsoolis juhuslikult valitud sõna.
+// Kuvame juhusliku eesti sõna kasutajale.
 const sona = juhuslikSona();
-console.log("Juhuslik sõna:", sona.eesti);
+document.getElementById("question").textContent = sona.eesti;
+
+// Kontrollime, kas kasutaja sisestatud tõlge on õige.
+document.getElementById("checkButton").addEventListener("click", function () {
+    const vastus = document.getElementById("answer").value.trim().toLowerCase();
+    const tulemus = document.getElementById("result");
+
+    if (vastus === sona.vene) {
+        tulemus.textContent = "Õige!";
+    } else {
+        tulemus.textContent = "Vale! Õige vastus on: " + sona.vene;
+    }
+});

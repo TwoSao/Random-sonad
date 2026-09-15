@@ -3,3 +3,18 @@ body {
     text-align: center;
     margin-top: 50px;
 }
+
+#game {
+    width: 400px;
+    margin: 30px auto;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
