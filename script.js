@@ -5,24 +5,38 @@ const sonad = [
     { eesti: "auto", vene: "машина" }
 ];
 
-// Valime massiivist juhusliku sõna.
-function juhuslikSona() {
-    const juhuslikIndeks = Math.floor(Math.random() * sonad.length);
-    return sonad[juhuslikIndeks];
-}
+// Valime esimese ülesande jaoks juhusliku sõna.
+const sonaEt = sonad[Math.floor(Math.random() * sonad.length)];
 
-// Kuvame juhusliku eesti sõna kasutajale.
-const sona = juhuslikSona();
-document.getElementById("question").textContent = sona.eesti;
+// Valime teise ülesande jaoks juhusliku sõna.
+const sonaRu = sonad[Math.floor(Math.random() * sonad.length)];
 
-// Kontrollime, kas kasutaja sisestatud tõlge on õige.
-document.getElementById("checkButton").addEventListener("click", function () {
-    const vastus = document.getElementById("answer").value.trim().toLowerCase();
-    const tulemus = document.getElementById("result");
+// Kuvame eesti sõna, millele tuleb leida venekeelne vaste.
+document.getElementById("questionEt").textContent = sonaEt.eesti;
 
-    if (vastus === sona.vene) {
+// Kuvame vene sõna, millele tuleb leida eestikeelne vaste.
+document.getElementById("questionRu").textContent = sonaRu.vene;
+
+// Kontrollime eesti sõna venekeelset tõlget.
+document.getElementById("checkRuButton").addEventListener("click", function () {
+    const vastus = document.getElementById("answerRu").value.trim().toLowerCase();
+    const tulemus = document.getElementById("resultRu");
+
+    if (vastus === sonaEt.vene) {
         tulemus.textContent = "Õige!";
     } else {
-        tulemus.textContent = "Vale! Õige vastus on: " + sona.vene;
+        tulemus.textContent = "Vale! Õige vastus on: " + sonaEt.vene;
+    }
+});
+
+// Kontrollime vene sõna eestikeelset tõlget.
+document.getElementById("checkEtButton").addEventListener("click", function () {
+    const vastus = document.getElementById("answerEt").value.trim().toLowerCase();
+    const tulemus = document.getElementById("resultEt");
+
+    if (vastus === sonaRu.eesti) {
+        tulemus.textContent = "Õige!";
+    } else {
+        tulemus.textContent = "Vale! Õige vastus on: " + sonaRu.eesti;
     }
 });

@@ -10,15 +10,28 @@
 
 <h1>Random sõnad</h1>
 
-<div id="game">
-    <p id="question"></p>
+<table>
+    <tr>
+        <th>Eesti → Vene</th>
+        <th>Vene → Eesti</th>
+    </tr>
 
-    <input type="text" id="answer" placeholder="Sisesta vene tõlge">
+    <tr>
+        <td>
+            <p id="questionEt"></p>
+            <input type="text" id="answerRu" placeholder="Sisesta vene tõlge">
+            <button id="checkRuButton">Kontrolli</button>
+            <p id="resultRu"></p>
+        </td>
 
-    <button id="checkButton">Kontrolli</button>
-
-    <p id="result"></p>
-</div>
+        <td>
+            <p id="questionRu"></p>
+            <input type="text" id="answerEt" placeholder="Sisesta eesti tõlge">
+            <button id="checkEtButton">Kontrolli</button>
+            <p id="resultEt"></p>
+        </td>
+    </tr>
+</table>
 
 <script src="script.js"></script>
 </body>

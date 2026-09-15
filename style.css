@@ -1,20 +1,16 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-}
-
-#game {
-    width: 400px;
+table {
+    width: 80%;
+    max-width: 900px;
     margin: 30px auto;
+    border-collapse: collapse;
 }
 
-input {
-    padding: 10px;
-    margin: 10px;
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    cursor: pointer;
+th {
+    background-color: #eeeeee;
 }
