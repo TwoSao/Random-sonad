@@ -9,6 +9,7 @@
 <body>
 
 <h1>Random sõnad</h1>
+<p class="subtitle">Harjuta eesti ja vene keele sõnavara</p>
 
 <table>
     <tr>
@@ -18,20 +19,24 @@
 
     <tr>
         <td>
-            <p id="questionEt"></p>
+            <p class="word" id="questionEt"></p>
             <input type="text" id="answerRu" placeholder="Sisesta vene tõlge">
+            <br>
             <button id="checkRuButton">Kontrolli</button>
-            <p id="resultRu"></p>
+            <p class="result" id="resultRu"></p>
         </td>
 
         <td>
-            <p id="questionRu"></p>
+            <p class="word" id="questionRu"></p>
             <input type="text" id="answerEt" placeholder="Sisesta eesti tõlge">
+            <br>
             <button id="checkEtButton">Kontrolli</button>
-            <p id="resultEt"></p>
+            <p class="result" id="resultEt"></p>
         </td>
     </tr>
 </table>
+
+<button id="refreshButton" onclick="location.reload()">Uus sõna</button>
 
 <script src="script.js"></script>
 </body>

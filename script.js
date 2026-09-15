@@ -1,3 +1,5 @@
+// Sõnade massiiv sisaldab eesti ja vene keele tõlkeid.
+
 const sonad = [
     { eesti: "kass", vene: "кошка" },
     { eesti: "koer", vene: "собака" },
