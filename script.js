@@ -48,3 +48,38 @@ document.getElementById("checkEtButton").addEventListener("click", function () {
         tulemus.textContent = "Vale! Õige vastus on: " + sonaRu.eesti;
     }
 });
+
+// Sõna valimise ja tõlke sisestamise ala.
+const wordSelect = document.getElementById("wordSelect");
+const translationArea = document.getElementById("translationArea");
+const selectedWord = document.getElementById("selectedWord");
+const translationInput = document.getElementById("translationInput");
+const checkTranslationButton = document.getElementById("checkTranslationButton");
+const translationResult = document.getElementById("translationResult");
+
+// Näitame valitud sõna ja tõlke sisestamise välja.
+wordSelect.addEventListener("change", function () {
+    if (wordSelect.value !== "") {
+        translationArea.style.display = "block";
+        selectedWord.textContent = wordSelect.value;
+        translationInput.value = "";
+        translationResult.textContent = "";
+    } else {
+        translationArea.style.display = "none";
+    }
+});
+
+// Kontrollime valitud sõna tõlget.
+checkTranslationButton.addEventListener("click", function () {
+    const valitudSona = sonad.find(function (sona) {
+        return sona.eesti === wordSelect.value;
+    });
+
+    const vastus = translationInput.value.trim().toLowerCase();
+
+    if (valitudSona && vastus === valitudSona.vene) {
+        translationResult.textContent = "Õige!";
+    } else if (valitudSona) {
+        translationResult.textContent = "Vale! Õige vastus on: " + valitudSona.vene;
+    }
+});
