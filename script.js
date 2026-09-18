@@ -13,7 +13,7 @@ const sonad = [
     { eesti: "hajus", vene: "распределённый" }
 ];
 
-// Valime esimese ülesande jaoks juhusliku sõna.
+// Valime esimese ülesande jaoks juhusliku sõna!
 const sonaEt = sonad[Math.floor(Math.random() * sonad.length)];
 
 // Valime teise ülesande jaoks juhusliku sõna.
