@@ -38,6 +38,31 @@
 
 <button id="refreshButton" onclick="location.reload()">Uus sõna</button>
 
+<!-- Sõna valimise ala -->
+<div class="word-selection">
+    <h2>Vali sõna</h2>
+
+    <select id="wordSelect">
+        <option value="">-- Vali sõna --</option>
+        <option value="kass">kass</option>
+        <option value="koer">koer</option>
+        <option value="maja">maja</option>
+        <option value="auto">auto</option>
+    </select>
+
+    <div id="translationArea" style="display: none;">
+        <p class="word" id="selectedWord"></p>
+
+        <input type="text" id="translationInput" placeholder="Sisesta tõlge">
+
+        <br>
+
+        <button id="checkTranslationButton">Kontrolli</button>
+
+        <p class="result" id="translationResult"></p>
+    </div>
+</div>
+
 <script src="script.js"></script>
 </body>
-</html>
+</html>g
