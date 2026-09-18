@@ -1,10 +1,16 @@
 // Sõnade massiiv sisaldab eesti ja vene keele tõlkeid.
 
 const sonad = [
-    { eesti: "kass", vene: "кошка" },
-    { eesti: "koer", vene: "собака" },
-    { eesti: "maja", vene: "дом" },
-    { eesti: "auto", vene: "машина" }
+    { eesti: "server", vene: "сервер" },
+    { eesti: "klient", vene: "клиент" },
+    { eesti: "võrk", vene: "сеть" },
+    { eesti: "andmebaas", vene: "база данных" },
+    { eesti: "sõlm", vene: "узел" },
+    { eesti: "protokoll", vene: "протокол" },
+    { eesti: "ühendus", vene: "соединение" },
+    { eesti: "andmed", vene: "данные" },
+    { eesti: "turvalisus", vene: "безопасность" },
+    { eesti: "hajus", vene: "распределённый" }
 ];
 
 // Valime esimese ülesande jaoks juhusliku sõna.
